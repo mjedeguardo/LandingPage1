@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    color: #fff;
+}
+
+.landing{
+    display: flex;
+    /*mantiene su forma de escritura*/
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+}
+
+.landing:before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    content: "";
+    z-index: -1;
+}
+/*display en nav me pone los menus de lado */
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+nav .right{
+    display: flex;
+    align-items: center;
+}
+nav .subscribe{
+    margin-left: 20px;
+}
+
+a.subscribe{
+    padding: 6px 30px;
+    border: 2px solid #2196f3;
+    border-radius: 20px;
+    background-color: #2196f3;
+}
+a.subscribe:hover{
+    background-color: #fff;
+    color: #2196f3;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    padding:6px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.6s ease;
+}
+section {
+    text-align: center;
+    width: 60vw;
+    margin: auto;
+}
+section h1{
+    font-size: 34px;
+}
+section p{
+   line-height: 30px;
+   margin: 20px 0;
+}
+section a{
+    margin-bottom: 20px;
+    display: inline-block;
+
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+background-color: #fff;
+color: #333;
+
+}
+a,p{
+    font-size: 13.33333px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+a.brand{
+    font-size: 36px;
+    font-family:cursive;
+}
+/*queries*/
+
+@media (max-width: 767px){
+    nav{
+        flex-direction: column;
+    }
+    nav a {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    nav .right{
+        justify-content: center;
+    }
+    nav ul li {  
+        text-align: center;
+      }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin-bottom: 5px;
+    }
+    nav a.subscribe{
+        display: none;
+    }
+    }
+    /*desaparece*/
+  
